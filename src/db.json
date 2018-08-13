@@ -1,0 +1,12 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "name": "Harry Potter and the Sorcerer's Stone"
+        },
+        {
+            "id": 2,
+            "name": "Harry Potter and the Chamber of Secrets"
+        }
+    ]
+}
