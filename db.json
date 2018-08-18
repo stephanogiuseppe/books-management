@@ -1,43 +1,64 @@
 {
-    "books": [
-        {
-            "id": 1,
-            "name": "Harry Potter and the Sorcerer's Stone",
-            "status": "read",
-            "genre": "Fantasy",
-            "comments": "Harry Potter and the Sorcerer's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to the Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.",
-            "update": "01/01/2018"
-        },
-        {
-            "id": 2,
-            "name": "Harry Potter and the Chamber of Secrets",
-            "status": "read",
-            "genre": "Fantasy",
-            "comments": "arry Potter and the Chamber of Secrets is a fantasy novel written by British author J. K. Rowling and the second novel in the Harry Potter series. The plot follows Harry's second year at Hogwarts School of Witchcraft and Wizardry, during which a series of messages on the walls of the school's corridors warn that the 'Chamber of Secrets' has been opened and that the 'heir of Slytherin' would kill all pupils who do not come from all-magical families. These threats are found after attacks which leave residents of the school 'petrified' (frozen like stone). Throughout the year, Harry and his friends Ron and Hermione investigate the attacks.",
-            "update": "01/01/2018"
-        },
-        {
-            "id": 3,
-            "name": "Harry Potter and the Prisioner of Azkaban",
-            "status": "read",
-            "genre": "Fantasy",
-            "comments": "Harry Potter and the Prisoner of Azkaban is a fantasy novel written by British author J. K. Rowling and the third in the Harry Potter series. The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry. Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban who they believe is one of Lord Voldemort's old allies.",
-            "update": "01/01/2018"
-        },
-        {
-            "id": 4,
-            "name": "Harry Potter and the Sorcerer's Stone",
-            "status": "reading",
-            "genre": "Fantasy",
-            "comments": "Harry Potter and the Goblet of Fire is a fantasy book written by British author J. K. Rowling and the fourth novel in the Harry Potter series. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.",
-            "update": "17/08/2018",
-            "current":{
-                "chapter": "24",
-                "page": "323"
-            }
-        }
-    ],
-    "genres":[
-        "Tragedy", "Tragic comedy", "Fantasy", "Mythology", "Adventure", "Mystery", "Science fiction", "Drama", "Romance", "Action / Adventure", "Satire", "Horror"
-    ]
+  "books": [
+    {
+      "id": 1,
+      "name": "Harry Potter and the Sorcerer's Stone",
+      "status": "read",
+      "genre": "Fantasy",
+      "comments": "Harry Potter and the Sorcerer's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to the Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.",
+      "update": "01/01/2018"
+    },
+    {
+      "id": 2,
+      "name": "Harry Potter and the Chamber of Secrets",
+      "status": "read",
+      "genre": "Fantasy",
+      "comments": "arry Potter and the Chamber of Secrets is a fantasy novel written by British author J. K. Rowling and the second novel in the Harry Potter series. The plot follows Harry's second year at Hogwarts School of Witchcraft and Wizardry, during which a series of messages on the walls of the school's corridors warn that the 'Chamber of Secrets' has been opened and that the 'heir of Slytherin' would kill all pupils who do not come from all-magical families. These threats are found after attacks which leave residents of the school 'petrified' (frozen like stone). Throughout the year, Harry and his friends Ron and Hermione investigate the attacks.",
+      "update": "01/01/2018"
+    },
+    {
+      "id": 3,
+      "name": "Harry Potter and the Prisioner of Azkaban",
+      "status": "read",
+      "genre": "Fantasy",
+      "comments": "Harry Potter and the Prisoner of Azkaban is a fantasy novel written by British author J. K. Rowling and the third in the Harry Potter series. The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry. Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban who they believe is one of Lord Voldemort's old allies.",
+      "update": "01/01/2018"
+    },
+    {
+      "id": 4,
+      "name": "Harry Potter and the Sorcerer's Stone",
+      "status": "reading",
+      "genre": "Fantasy",
+      "comments": "Harry Potter and the Goblet of Fire is a fantasy book written by British author J. K. Rowling and the fourth novel in the Harry Potter series. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.",
+      "update": "17/08/2018",
+      "current": {
+        "chapter": "24",
+        "page": "323"
+      }
+    },
+    {
+      "id": 5
+    },
+    {
+      "name": "book of spell",
+      "status": "read",
+      "genre": "Tragedy",
+      "comment": "Non",
+      "id": 6
+    }
+  ],
+  "genres": [
+    "Tragedy",
+    "Tragic comedy",
+    "Fantasy",
+    "Mythology",
+    "Adventure",
+    "Mystery",
+    "Science fiction",
+    "Drama",
+    "Romance",
+    "Action / Adventure",
+    "Satire",
+    "Horror"
+  ]
 }
