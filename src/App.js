@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import Home from './Home';
+import Books from './Books';
 import NewBook from './NewBook';
 
 // Stateless Functional Components
@@ -42,6 +43,7 @@ class App extends Component {
 					</nav>
 
 					<Route exact path="/" component={ Home } />
+					<Route exact path="/books/:genre" component={ Books } />
 					<Route exact path="/new" component={ NewBook } />
 					<Route exact path="/about" component={ About } />
 				</div>

@@ -37,24 +37,21 @@
       }
     },
     {
-      "id": 5
-    },
-    {
       "name": "book of spell",
       "status": "read",
       "genre": "Tragedy",
-      "comment": "Non",
-      "id": 6
+      "comment": "-",
+      "id": 5
     }
   ],
   "genres": [
     "Tragedy",
-    "Tragic comedy",
+    "Tragic Comedy",
     "Fantasy",
     "Mythology",
     "Adventure",
     "Mystery",
-    "Science fiction",
+    "Science Fiction",
     "Drama",
     "Romance",
     "Action / Adventure",
