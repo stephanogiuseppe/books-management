@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class App extends Component {
 	constructor(props) {
@@ -8,6 +9,10 @@ class App extends Component {
 		}
 	}
 	componentDidMount() {
+		// TODO: start json server [json-server --watch db.json] to get response
+		axios.get('http://localhost/genres').then((res) => {
+			console.log(res);
+		});
 	}
 	render() {
 		return (
