@@ -1,23 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-import Hello from './Hello'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          <Hello name="Stéphano."></Hello>
-        </p>
-      </div>
-    );
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			count: 0
+		}
+	}
+	componentDidMount() {
+	}
+	render() {
+		return (
+			<div>
+				<nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+					<div className="container">
+						<div className="navbar-header page-scroll">
+							<a className="navbar-brand page-scroll" href="#page-top">
+								<img src="images/logo.png" height="30" />
+							</a>
+						</div>
+
+						<div className="collapse navbar-collapse navbar-ex1-collapse">
+							<ul className="nav navbar-nav">
+								<li>
+									<a href="">Menu item { this.state.count }</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+
+				<section id="intro" className="intro-section">
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-12">
+								<h1><img src="images/logo.png" style={{ width: 50 + '%' }} /></h1>
+								<p>Never forget the book you read</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		);
+	}
 }
 
 export default App;
