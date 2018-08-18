@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 import api from './Api';
 
@@ -14,7 +15,8 @@ class NewBook extends Component {
 
         this.state = {
 			genres: [],
-			isLoading: false
+            isLoading: false,
+            redirect: false
 		}
 	}
 
@@ -24,26 +26,31 @@ class NewBook extends Component {
 		api.loadGenres().then((resGenres) => {
 			this.setState({
 				isLoading: false,
-				genres: resGenres.data
+                genres: resGenres.data
 			});
 		});
 	}
 
     saveBook = () => {
-        const book = {
+        const newBook = {
             name: this.refs.name.value,
             status: this.refs.status.value,
             genre: this.refs.genre.value,
             comment: this.refs.comment.value
         };
-        api.saveBook(book).then((resSaveBook) => {
-            console.log(resSaveBook);
+        api.saveBook(newBook).then((resSaveBook) => {
+            this.setState({
+                redirect: '/books/' + this.refs.genre.value
+            });
         });
     }
 
     render() {
         return (
             <section className="intro-section">
+                {
+                    this.state.redirect && <Redirect to={ this.state.redirect } />
+                }
                 <h1>New book</h1>
 
                 <form>

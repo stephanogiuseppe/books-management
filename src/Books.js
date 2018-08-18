@@ -35,7 +35,7 @@ class Books extends Component {
                 <div className="thumbnail">
                     <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                     <div className="caption">
-                        <h4 className="group inner list-group-item-heading">Generic book</h4>
+                        <h4 className="group inner list-group-item-heading">{ book.name }</h4>
                         <div className="row">
                             <div className="col-xs-12 col-md-6">
                                 <p className="lead">{ book.genre } - { statuses[book.status] }</p>
