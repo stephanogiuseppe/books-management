@@ -9,14 +9,15 @@ const statuses = {
     'toRead': 'To read'
 };
 
-class NewBook extends Component {
+class EditBooks extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
 			genres: [],
             isLoading: false,
-            redirect: false
+            redirect: false,
+            book: {}
         }
 
         this.saveBook = this.saveBook.bind(this);
@@ -24,6 +25,14 @@ class NewBook extends Component {
 
     componentDidMount() {
 		this.setState({ isLoading: true });
+
+        api.getBooksById(this.props.match.params.id).then((resBook) => {
+            this.setState({ book: resBook.data });
+            this.refs.name.value = this.state.book.name;
+            this.refs.status.value = this.state.book.status;
+            this.refs.genre.value = this.state.book.genre;
+            this.refs.comment.value = this.state.book.comments;
+        });
 
 		api.loadGenres().then((resGenres) => {
 			this.setState({
@@ -34,14 +43,15 @@ class NewBook extends Component {
 	}
 
     saveBook = () => {
-        const newBook = {
+        const editBooks = {
+            id: this.props.match.params.id,
             name: this.refs.name.value,
             status: this.refs.status.value,
             genre: this.refs.genre.value,
             comment: this.refs.comment.value
         };
 
-        api.saveBook(newBook).then(() => {
+        api.updateBook(editBooks).then(() => {
             this.setState({
                 redirect: '/books/' + this.refs.genre.value
             });
@@ -54,7 +64,7 @@ class NewBook extends Component {
                 {
                     this.state.redirect && <Redirect to={ this.state.redirect } />
                 }
-                <h1>New book</h1>
+                <h1>Edit book</h1>
 
                 <form>
                     Name: <input type="text" className="form-control" ref="name" /> <br />
@@ -90,4 +100,4 @@ class NewBook extends Component {
     }
 }
 
-export default NewBook;
+export default EditBooks;

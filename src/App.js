@@ -8,6 +8,7 @@ import {
 import Home from './Home';
 import Books from './Books';
 import NewBook from './NewBook';
+import EditBooks from './EditBooks';
 
 // Stateless Functional Components
 const About = () => <section className="intro-section"><h1>About</h1></section>
@@ -43,6 +44,7 @@ class App extends Component {
 					</nav>
 
 					<Route exact path="/" component={ Home } />
+					<Route exact path="/books/edit/:id" component={ EditBooks } />
 					<Route exact path="/books/:genre" component={ Books } />
 					<Route exact path="/new" component={ NewBook } />
 					<Route exact path="/about" component={ About } />

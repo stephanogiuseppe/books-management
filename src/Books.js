@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import api from './Api';
+import { Link } from 'react-router-dom';
 
 const statuses = {
     'read': 'Read',
@@ -44,7 +45,7 @@ class Books extends Component {
 
     renderBooks = (book) => {
         return (
-            <div className="item  col-xs-4 col-lg-4">
+            <div key={ book.id } className="item  col-xs-4 col-lg-4">
                 <div className="thumbnail">
                     <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                     <div className="caption">
@@ -55,7 +56,7 @@ class Books extends Component {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-6">
-                            <a className="btn btn-success">Edit</a>
+                            <Link className="btn btn-success" to={ '/books/edit/' + book.id }>Edit</Link>
                             <a className="btn btn-success" onClick={() => this.deleteBook(book.id)}>Delete</a>
                         </div>
                     </div>
