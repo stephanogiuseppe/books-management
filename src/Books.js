@@ -17,9 +17,16 @@ class Books extends Component {
             isLoding: false,
             books: []
         }
+
+        this.renderBooks = this.renderBooks.bind(this);
+        this.loadData = this.loadData.bind(this);
     }
 
     componentDidMount() {
+        this.loadData();
+    }
+    
+    loadData = () => {
         this.setState({ isLoding: true });
         api.getBooksByGenre(this.props.match.params.genre).then((resBooks) => {
             this.setState({
@@ -27,8 +34,14 @@ class Books extends Component {
                 books: resBooks.data
             });
         });
-        
     }
+    
+    deleteBook = (id) => {
+        api.deleteBook(id).then(() => {
+            this.loadData();
+        });
+    }
+
     renderBooks = (book) => {
         return (
             <div className="item  col-xs-4 col-lg-4">
@@ -43,6 +56,7 @@ class Books extends Component {
                         </div>
                         <div className="col-xs-12 col-md-6">
                             <a className="btn btn-success" href="">Config</a>
+                            <a className="btn btn-success" onClick={() => this.deleteBook(book.id)}>Delete</a>
                         </div>
                     </div>
                 </div>
