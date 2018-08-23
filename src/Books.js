@@ -55,7 +55,7 @@ class Books extends Component {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-6">
-                            <a className="btn btn-success" href="">Config</a>
+                            <a className="btn btn-success">Edit</a>
                             <a className="btn btn-success" onClick={() => this.deleteBook(book.id)}>Delete</a>
                         </div>
                     </div>
@@ -68,6 +68,14 @@ class Books extends Component {
         return (
             <section id="intro" className="intro-section">
                 <h1>Books of { this.props.match.params.genre }</h1>
+                {
+                    this.state.isLoding && 
+                    <p>Loading...</p>
+                }
+                {
+                    !this.state.isLoding && this.state.books.length === 0 &&
+                    <div className='alert alert-info'>No book registered</div>
+                }
 
                 <div id="books" className="row list-group">
                     {
